@@ -28,13 +28,8 @@ function generatePassword() {
 
   var uppercasePrompt = window.confirm("Would you like to include uppercase letters?");
 
-  if (confirm("OK") == true) {
-    while (true) {
-      uppercase = LETTERS
-      break;
-    }
-  } else {
-    (confirm("cancel") == false)
+  if (uppercasePrompt) {
+    userSelections = userSelections = LETTERS
   }
 
 
@@ -42,14 +37,8 @@ function generatePassword() {
 
   var numbersPrompt = window.confirm("Would you like to include numbers?");
 
-  if (confirm("OK") == true) {
-    while (true) {
-      numerical = numbers
-      break;
-    }
-  }
-  else {
-    (confirm("cancel") == false)
+  if (numbersPrompt) {
+    userSelections = userSelections = numbers
 
   }
 
@@ -59,14 +48,8 @@ function generatePassword() {
 
   var characterPrompt = window.confirm("Would you like to include special characters?");
 
-  if (confirm("OK") == true) {
-    while (true) {
-      info = characters
-      break;
-    }
-  }
-  else {
-    (confirm("cancel") == false)
+  if (characterPrompt) {
+    userSelections = userSelections + characters
   }
 
 
@@ -90,16 +73,11 @@ function generatePassword() {
       var randomCharacter = userSelections.charAt(randomIndex);
       password = password + randomCharacter
     }
-
-
-
   }
   else {
     window.alert("Please try again")
   }
   // // Write password to the #password input
-
-
 
   return password
 }
