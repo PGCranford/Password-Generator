@@ -43,8 +43,6 @@ function generatePassword() {
 
   }
 
-
-
   //asking if special characters should be included
 
   var characterPrompt = window.confirm("Would you like to include special characters?");
@@ -59,8 +57,6 @@ function generatePassword() {
   }
 
   //setting password length
-
-
 
   var password = ""
 
@@ -77,13 +73,9 @@ function generatePassword() {
     window.alert("Please try again")
   }
 
-
   return password
 
-
 }
-
-
 
 var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", function () {
