@@ -6,12 +6,18 @@ function generatePassword() {
   var characters = "!.@.#,&,(,),<,>,%";
 
 
+  var passwordLength = window.prompt('How long would you like your password to be?');
+  passwordLength = Number.parseInt(passwordLength, 10)
+
+  var minPasswordlength = 8;
+  var maxPasswordlength = 128;
+
+
   // Get references to the #generate element
 
-
-  //asking if lowercase letters should be included
   var userSelections = ""
 
+  //asking if lowercase letters should be included
 
   var lowercasePrompt = window.confirm("Would you like to include lowercase letters?")
 
@@ -20,10 +26,6 @@ function generatePassword() {
 
   }
 
-
-
-
-
   //asking if uppercase letters should be included
 
   var uppercasePrompt = window.confirm("Would you like to include uppercase letters?");
@@ -31,7 +33,6 @@ function generatePassword() {
   if (uppercasePrompt) {
     userSelections = userSelections = LETTERS
   }
-
 
   //asking if numbers should be included
 
@@ -52,16 +53,14 @@ function generatePassword() {
     userSelections = userSelections + characters
   }
 
-
-
+  if (userSelections === "") {
+    window.alert("You must include one set of criteria. Please Try again.")
+    return
+  }
 
   //setting password length
 
-  var passwordLength = window.prompt('How long would you like your password to be?');
-  passwordLength = Number.parseInt(passwordLength, 10)
 
-  var minPasswordlength = 8;
-  var maxPasswordlength = 128;
 
   var password = ""
 
@@ -77,13 +76,12 @@ function generatePassword() {
   else {
     window.alert("Please try again")
   }
-  // // Write password to the #password input
+
 
   return password
+
+
 }
-
-
-
 
 
 
@@ -93,4 +91,3 @@ generateBtn.addEventListener("click", function () {
   var passwordDislplay = document.querySelector("#password")
   passwordDislplay.textContent = password
 })
-
