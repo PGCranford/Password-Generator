@@ -31,7 +31,7 @@ function generatePassword() {
   var uppercasePrompt = window.confirm("Would you like to include uppercase letters?");
 
   if (uppercasePrompt) {
-    userSelections = userSelections = LETTERS
+    userSelections = userSelections + LETTERS
   }
 
   //asking if numbers should be included
@@ -39,7 +39,7 @@ function generatePassword() {
   var numbersPrompt = window.confirm("Would you like to include numbers?");
 
   if (numbersPrompt) {
-    userSelections = userSelections = numbers
+    userSelections = userSelections + numbers
 
   }
 
