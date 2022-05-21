@@ -80,6 +80,6 @@ function generatePassword() {
 var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", function () {
   var password = generatePassword()
-  var passwordDislplay = document.querySelector("#password")
-  passwordDislplay.textContent = password
+  var passwordDisplay = document.querySelector("#password")
+  passwordDisplay.textContent = password
 })
